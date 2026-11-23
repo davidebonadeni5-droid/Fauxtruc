@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fauxtruc — Écrans et outils plein écran</title>
+<meta name="description" content="Écran blanc, écrans de couleur, lumière pour visio, test de pixels morts, mire, pluie de code, prompteur, bruit blanc et autres outils plein écran gratuits.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <a class="brand" href="#">Faux<span>truc</span></a>
+  <nav>
+    <a href="#couleurs">Couleurs</a>
+    <a href="#outils">Outils</a>
+    <a href="#farces">Farces</a>
+    <a href="#faq">FAQ</a>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <h1>Un écran plein de lumière, en un clic</h1>
+    <p>Choisis une couleur ou un outil, puis passe en plein écran. Rien à installer, tout tourne dans ton navigateur.</p>
+    <button class="big" data-open="color" data-color="#ffffff">Ouvrir l'écran blanc</button>
+    <p class="keys"><kbd>F</kbd> plein écran · <kbd>Échap</kbd> quitter · <kbd>H</kbd> masquer les réglages</p>
+  </section>
+
+  <section id="couleurs">
+    <h2>Écrans de couleur</h2>
+    <div class="swatches" id="swatches"></div>
+    <div class="custom">
+      <label>Couleur perso <input type="color" id="customColor" value="#3fa7ff"></label>
+      <button data-open="color" id="customOpen">Afficher</button>
+    </div>
+  </section>
+
+  <section id="outils">
+    <h2>Outils</h2>
+    <div class="grid" id="toolsGrid"></div>
+  </section>
+
+  <section id="farces">
+    <h2>Farces &amp; ambiance</h2>
+    <div class="grid" id="funGrid"></div>
+  </section>
+
+  <section id="faq" class="faq">
+    <h2>Questions fréquentes</h2>
+    <details><summary>À quoi sert un écran blanc ?</summary><p>À éclairer ton visage en visio, à servir de table lumineuse pour décalquer un dessin, à nettoyer l'écran (la poussière se voit mieux) ou à vérifier l'uniformité de la dalle.</p></details>
+    <details><summary>Comment repérer un pixel mort ?</summary><p>Ouvre le test de pixels, passe en plein écran et fais défiler les couleurs. Un point qui reste noir, blanc ou figé sur une couleur est un pixel défectueux.</p></details>
+    <details><summary>Le plein écran ne marche pas sur mon iPhone</summary><p>Safari sur iPhone limite l'API plein écran. Ajoute la page à l'écran d'accueil (Partager → Sur l'écran d'accueil) pour l'ouvrir sans barre.</p></details>
+    <details><summary>Mes réglages sont-ils envoyés quelque part ?</summary><p>Non. Aucune donnée ne quitte ton appareil ; il n'y a ni compte ni traceur.</p></details>
+  </section>
+</main>
+
+<footer>
+  <p>Fauxtruc · outils plein écran gratuits · fait avec du HTML, du CSS et un peu de JavaScript.</p>
+</footer>
+
+<div id="stage" hidden>
+  <div id="canvasWrap"></div>
+  <div id="panel" class="panel"></div>
+  <div id="hint" class="hint">Clique ou touche l'écran pour afficher les réglages</div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
